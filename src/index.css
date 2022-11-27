@@ -1,13 +1,740 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+span {
+  margin: 0px 6px;
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: black;
+
+  background-position: top;
+}
+.row {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* NAVBAR */
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  height: 150px;
+  background: white;
+}
+.navbar-list {
+  display: flex;
+}
+.navbar-links {
+  list-style: none;
+}
+.link {
+  margin-right: 24px;
+  color: black;
+  font-size: 18px;
+}
+.navbar-logo-wrapper {
+  height: 68px;
+  background: white;
+  width: 240px;
+}
+.navbar-logo-image {
+  height: 100%;
+  width: 100%;
+}
+
+/* LANDING PAGE */
+
+.landing-page .row {
+  text-align: center;
+}
+.landing-page {
+  min-height: 100vh;
+  height: 100%;
+  background-image: url("./assets/Undraw_Books.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.landing-title {
+  color: white;
+  margin: 24px 0px;
+}
+.landing-button {
+  margin: 48px 0px;
+  padding: 8px;
+  border-radius: 16px;
+  background: #c8a2c8;
+}
+.landing-button:hover .landing-button-link {
+  color: rgba(255, 0, 0, 0.547);
+  cursor: pointer;
+}
+.landing-button-link {
+  color: white;
+}
+.landing-description {
+  color: white;
+}
+
+/* ADVANTAGES */
+
+.icon {
+  color: white;
+  background: #c8a2c8;
+  padding: 36px;
+  border-radius: 12px;
+  font-size: 48px;
+}
+.advantages {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.advantages-box {
+  display: flex;
+  justify-content: center;
+  border-color: yellow solid 40px;
+}
+.advantages-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* ADVANTAGE UI */
+
+.advantage-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.advantages-title {
+  margin: 24px 0px;
+  color: white;
+  font-size: 24px;
+}
+.advantages-description {
+  color: white;
+}
+/* FEATURED */
+.featured {
+  text-align: center;
+}
+.feature-heading {
+  margin: 48px 0px;
+  color: rgb(179, 39, 39);
+}
+/* DISCOUNTS */
+
+.discount-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.discounts {
+  text-align: center;
+}
+.discount-book-container {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.discount-decoration {
+  text-decoration: line-through 3px;
+  text-decoration-color: white;
+  font-style: italic;
+  color: yellow;
+  margin: 0px 12px;
+}
+.discount-heading {
+  margin: 48px 0px;
+  color: rgb(179, 39, 39);
+}
+/* BOOK */
+.featured-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+.book-container {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.book-discounted-price {
+  word-spacing: 32px;
+  color: white;
+  margin: 18px;
+  font-size: 20px;
+}
+.book-wrapper {
+  width: 220px;
+  height: 300px;
+  border: white solid 1px;
+  margin: 24px 0px;
+}
+.book-wrapper:hover {
+  transform: scale(1.05);
+  transition: all 300ms ease;
+}
+.book-image {
+  height: 100%;
+  width: 100%;
+}
+.book-title {
+  color: white;
+}
+/* EXPLORE */
+.explore-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.explore-heading {
+  color: rgb(179, 39, 39);
+}
+.explore-button {
+  margin: 48px 0px;
+  padding: 8px;
+  border-radius: 16px;
+  color: black;
+}
+/* ALL BOOKS */
+.all-books {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.all-books-container {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.all-books-wrapper {
+  border: white 1px solid;
+  margin: 24px;
+}
+.all-books-wrapper:hover {
+  transform: scale(1.05);
+  transition: all 300ms ease;
+}
+.all-books-title {
+  color: white;
+  margin: 4px 0px;
+}
+.all-books-discounted-price {
+  margin: 18px 0px;
+  color: white;
+}
+
+/* CART */
+#cart {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-description-price {
+  color: white;
+}
+.cart-item-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.cart-image-wrapper {
+  width: 100px;
+  height: 150px;
+  margin: 24px;
+  margin-left: 0px;
+}
+.cart-image {
+  width: 100%;
+  height: 100%;
+}
+.cart-button {
+  background: transparent;
+  color: lightcoral;
+}
+.cart-button:hover {
+  background: transparent;
+  color: red;
+  transition: all 200ms ease;
+  cursor: pointer;
+}
+.cart-price {
+  width: 50px;
+}
+.cart-calculation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
+.cart-empty-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.empty-image-wrapper {
+  height: 600px;
+  width: 100%;
+  margin: 48px;
+}
+.empty-image {
+  height: 100%;
+  width: 100%;
+}
+.empty-cart-header {
+  color: #c8a2c8;
+  margin: 24px 0px;
+}
+.cart-subtotal,
+.cart-tax,
+.cart-total {
+  margin: 12px 0px;
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+}
+.cart-enhance {
+  color: lightcoral;
+  font-size: 20px;
+}
+.cart-general-title {
+  margin: 12px 0px;
+  padding-left: 25px;
+  color: #f2f2f2;
+}
+.cart-general {
+  margin: 16px 0px;
+  color: lightcoral;
+}
+.cart-description-title {
+  margin: 4px 0px;
+}
+.cart-description {
+  width: 100px;
+}
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+}
+/* BOOK-ITEM */
+
+.book-item-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 172px 0px;
+}
+.book-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.book-item-general {
+  font-size: 24px;
+  color: rgb(179, 39, 39);
+}
+.book-item-title {
+  text-align: center;
+  color: white;
+  margin: 18px 0px;
+  font-size: 24px;
+}
+.book-item-summary {
+  width: 500px;
+  text-align: center;
+}
+.book-item-price {
+  text-align: center;
+}
+.book-item-button {
+  margin: 48px 0px;
+  padding: 8px;
+  border-radius: 16px;
+  background: rgb(179, 39, 39);
+  color: white;
+}
+.book-item-button-link {
+  color: white;
+}
+/* FOOTER */
+#footer {
+  background: white;
+}
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding: 100px 0px;
+}
+.footer-links-list {
+  display: flex;
+  margin: 24px 0px;
+}
+.footer-link {
+  color: black;
+  margin: 32px;
+  font-size: 24px;
+}
+.footer-image-wrapper {
+  height: 100px;
+  width: 200px;
+}
+.footer-image {
+  height: 100%;
+  width: 100%;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1280px) {
+  .landing-page {
+    background-size: 60vh;
+  }
+  .footer-image-wrapper {
+    height: 100px;
+    width: 300px;
+  }
+  .footer-image {
+    height: 100%;
+    width: 100%;
+  }
+  .footer-link {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1920px) {
+  /* Generics */
+  .row {
+    max-width: 1000px;
+  }
+  /* Navbar */
+  nav {
+    height: 100px;
+  }
+  .navbar-logo-wrapper {
+    height: 50px;
+  }
+  .link {
+    font-size: 16px;
+  }
+
+  /* Landing */
+
+  .landing-page {
+    background-size: 70vh;
+  }
+  .landing-title {
+    font-size: 24px;
+  }
+  .landing-description {
+    font-size: 20px;
+  }
+  .landing-button {
+    margin: 16px 0px;
+  }
+
+  /* Advantages */
+
+  .icon {
+    padding: 32px;
+    font-size: 48px;
+  }
+  .advantages-title {
+    font-size: 20px;
+  }
+  .advantages-description {
+    font-size: 14px;
+  }
+
+  /* Feature */
+
+  .feature-heading {
+    margin: 36px 0px;
+  }
+
+  /* Discount */
+
+  .discount-heading {
+    margin: 36px 0px;
+  }
+
+  /* Book */
+
+  .book-wrapper {
+    height: 250px;
+    width: 175px;
+  }
+  .book-image {
+    height: 100%;
+    width: 100%;
+  }
+
+  /* All Books */
+
+  .all-books-title {
+    font-size: 16px;
+  }
+  .all-books-discounted-price {
+    font-size: 16px;
+  }
+  .all-books-wrapper {
+    height: 250px;
+    width: 175px;
+  }
+  /* Book Item */
+  .book-item-container {
+    margin: 60px;
+  }
+  .book-item-image-wrapper {
+    height: 350px;
+    width: 250px;
+    margin-right:24px;
+  }
+  .book-item-image {
+    height: 100%;
+    width: 100%;
+  }
+  /* Footer */
+
+  .footer-image-wrapper {
+    height: 100px;
+    width: 200px;
+  }
+  .footer-image {
+    height: 100%;
+    width: 100%;
+  }
+  .footer-link {
+    font-size: 16px;
+  }
+}
+@media (max-width: 420px) {
+  .row {
+    width: 350px;
+  }
+  /* Navbar */
+
+  nav {
+    height: 75px;
+  }
+  .navbar-logo-wrapper {
+    height: 40px;
+    width: 80px;
+  }
+  .navbar-logo-image {
+    height: 100%;
+    width: 100%;
+  }
+  .link {
+    font-size: 10px;
+  }
+
+  /* Landing */
+
+  .landing-title {
+    font-size: 16px;
+  }
+  .landing-description {
+    font-size: 13px;
+  }
+  .landing-button {
+    padding: 4px;
+  }
+  .landing-button-link {
+    font-size: 10px;
+  }
+  .landing-page {
+    background-size: 45vh;
+  }
+
+  /* Advantages */
+
+  .icon {
+    padding: 18px;
+    font-size: 32px;
+  }
+  .advantages-title {
+    font-size: 16px;
+  }
+  .advantages-description {
+    font-size: 10px;
+  }
+  .advantages-container {
+    text-align: center;
+  }
+
+  /* Featured */
+
+  .feature-heading {
+    font-size: 24px;
+  }
+
+  /* Book */
+
+  .book-wrapper {
+    width: 150px;
+    height: 200px;
+  }
+  .book-title {
+    font-size: 13px;
+  }
+  .book-discounted-price {
+    font-size: 14px;
+  }
+  .book-container {
+    width: 50%;
+  }
+
+  /* All Books */
+
+  .all-books-container {
+    width: 50%;
+  }
+  .all-books-wrapper {
+    width: 150px;
+    height: 200px;
+  }
+  .all-books-title {
+    font-size: 12px;
+  }
+  .all-books-discounted-price {
+    font-size: 12px;
+  }
+
+  /* Book Item */
+
+  .book-item-general {
+    font-size: 14px;
+  }
+  .book-info {
+    font-size: 12px;
+  }
+  .book-item-image-wrapper {
+    height: 300px;
+    width: 200px;
+    margin-bottom: 24px;
+    border: white 1px solid;
+  }
+  .book-item-title,
+  .book-item-price,
+  .book-item-summary {
+    font-size: 12px;
+  }
+  .book-item-summary {
+    width: 95%;
+  }
+  .book-item-container {
+    flex-direction: column;
+  }
+  .book-item-button {
+    padding: 6px;
+  }
+  .book-item-button-link {
+    font-size: 10px;
+  }
+
+  /* Discount */
+
+  .discount-book-container {
+    width: 50%;
+  }
+  .discount-heading {
+    font-size: 24px;
+  }
+
+  /* Explore */
+
+  .explore-heading {
+    font-size: 24px;
+  }
+  .explore-button {
+    padding: 6px 14px;
+  }
+  .explore-button-link {
+    font-size: 10px;
+  }
+  /* CART */
+  .cart-image-wrapper {
+    width: 80px;
+    height: 120px;
+  }
+  .cart-button {
+    border: none;
+  }
+  .cart-general-title {
+    font-size: 16px;
+  }
+  .cart-description-title,
+  .cart-description-price,
+  .cart-button,
+  .cart-description,
+  .cart-price,
+  .cart-calculation {
+    font-size: 10px;
+  }
+  .cart-subtotal,
+  .cart-tax,
+  .cart-total {
+    width: 150px;
+  }
+  .cart-description-price {
+    display: flex;
+    flex-direction: column;
+  }
+  .cart-enhance {
+    font-size: 15px;
+  }
+  /* Footer */
+
+  .footer-container {
+    height: 20vh;
+  }
+  .footer-image-wrapper {
+    width: 130px;
+    height: 100px;
+  }
+  .footer-link {
+    font-size: 14px;
+  }
 }
